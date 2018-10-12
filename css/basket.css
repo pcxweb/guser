@@ -1,0 +1,150 @@
+body,html{
+	width: 100%;
+	height: 100%
+}
+#app{
+	min-height: 100%;
+	padding:0.3rem 0.24rem;
+	background-color: #f2f2f2;
+	box-sizing: border-box;
+}
+#app .title{
+  text-align: center;
+  color: #018bd4;
+  font-weight: bold;
+}
+#app .title .zh_name{
+  font-size: 0.4rem;
+  margin-bottom: 0.1rem;
+}
+#app .title .en_name{
+  font-size: 0.28rem
+}
+.formtitle{
+  color: #666;
+  margin:0.24rem 0;
+  font-weight: bold;
+  font-size: 0.3rem;
+  display: flex;
+  align-items: center;
+  height: 0.4rem;
+}
+.formtitle:before{
+	content:"";
+	display: inline-block;
+	width: 0.05rem;
+	height: 0.4rem;
+	background-color:#018bd4;
+	margin-right: 0.12rem;
+}
+.formbox{
+	background-color: #fff;
+	box-shadow: 0 0 5px 0 #ccc;
+	padding:0.5rem 0.2rem;
+	border-radius: 4px;
+	position: relative;
+	margin-top: 0.5rem;
+}
+.formbox form{
+	position: relative;
+	z-index: 2;
+}
+.formbox .item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.3rem;
+}
+.formbox .item .radio-box{
+  display: flex;
+  align-items: center;
+  font-size: 0.24rem;
+  flex: 1;
+}
+/*.formbox .item .radio-box label{
+  margin-right: 0.4rem;
+  margin-left: 0.12rem;
+}*/
+.formbox .item .radio-box select{
+	border:1px solid #018bd4;
+	padding:0.12rem 0.2rem;
+	border-radius: 5px;
+	width: 100%;
+	box-sizing: border-box;
+}
+.formbox .item input{
+	border-bottom:1px solid #018bd4;
+	font-size: 0.3rem;
+	color: #000;
+	flex:1;
+	background-color: transparent;
+}
+.formbox .item .input-title{
+  width: 1.8rem;
+}
+.formbox .btnbox{
+	justify-content: center;
+}
+.formbox .item #subbtn{
+	background-color: #018bd4;
+	color: #fff;
+	padding:0.1rem 0.2rem;
+	border-radius: 5px;
+	margin-top: 0.3rem;
+}
+.footer{
+	position: absolute;
+	top:50%;
+	left:0;
+	width: 100%;
+	z-index: 1;
+	text-align: center;
+	transform: translateY(-50%);
+}
+.footer img{
+	width: 80%;
+}
+
+/*成功页面*/
+#app2{
+	height: 100%;
+	padding:0.3rem 0.24rem;
+	background-color: #f2f2f2;
+	box-sizing: border-box;
+}
+.succ_box{
+	width: 100%;
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.succ_box .img{
+	margin-bottom: 0.3rem;
+}
+.succ_box .img span{
+	font-size: 2rem;
+	color: green;
+}
+.succ_box .zh_desc,.en_desc{
+	width: 80%;
+	margin-bottom: 0.12rem;
+	font-size: 0.3rem;
+	text-align: center;
+}
+.succ_box .zh_desc{
+	line-height: 0.35rem;
+}
+.succ_box .en_desc{
+	font-size: 0.26rem
+}
+.foot{
+	position: fixed;
+	bottom:0.5rem;
+	left:0;
+	width: 100%;
+}
+.foot img{
+	width: 100%;
+	height: auto;
+}

@@ -1,0 +1,13 @@
+[
+	{"id":"A1","zhname":"邦德大学","enname":"Bond University","guojia":"英欧"},
+	{"id":"B1","zhname":"邦德大学吧","enname":"aaaUniversity","guojia":"英欧"},
+	{"id":"A2","zhname":"一德大学","enname":"eedUniversity","guojia":"英欧"},
+	{"id":"B2","zhname":"二德大学","enname":"ffUniversity","guojia":"英欧"},
+	{"id":"C3","zhname":"邦德大学","enname":"hhhUniversity","guojia":"英欧"},
+	{"id":"A1","zhname":"迪肯大学","enname":"Deakin University","guojia":"澳洲"},
+	{"id":"A1","zhname":"弗林德斯大学","enname":"Flinders University","guojia":"美国"},
+	{"id":"A2","zhname":"弗林德斯大学","enname":"btrgtg University","guojia":"美国"},
+	{"id":"A1","zhname":"乐卓博大学","enname":"La Trobe University","guojia":"加拿大"},
+	{"id":"A5","zhname":"麦考瑞大学","enname":"Macquarie University","guojia":"英欧"},
+	{"id":"D1","zhname":"斯威本大学","enname":"Swinburne University","guojia":"英欧"}
+]

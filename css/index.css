@@ -1,0 +1,384 @@
+html,body{
+	width: 100%;
+	height: 100%;
+}
+#app{
+	min-height: 100%;
+	background: #f2f2f2;
+}
+
+/*登录页面样式*/
+.login_app{
+	height: 100%;
+	width: 100%;
+	background-image: url("../images/loginbg.png");
+	-moz-background-size:100% 100%; /* 老版本的 Firefox */
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+}
+.login_app .login_logo{
+	padding-top: 1.6rem;
+	text-align: center;
+}
+.login_app .login_logo img{
+	width:6.14rem;
+	height: auto;
+}
+.login_app .language{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-size: 0.35rem;
+}
+.login_app .language div{
+	width: 1rem;
+	text-align: center;
+	flex:1;
+	border-bottom: 2px solid transparent;
+	padding-bottom: 5px;
+	color: #3b4c5b;
+}
+.login_app .language div.active{
+	border-color: #fe7a61;
+	color: #62707c;
+}
+#login{
+	width: 90%;
+	padding:0.3rem 0.24rem;
+	margin:0 auto;
+	box-sizing: border-box;
+	margin-top: 0.3rem;
+	border-radius: 5px;
+	background: #e2e2e2;
+	margin-top: 0.9rem;
+	background: -webkit-linear-gradient(rgba(153,153,153,.15) , rgba(255,255,255,0)); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgba(153,153,153,.15), rgba(255,255,255,0)); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgba(153,153,153,.15), rgba(255,255,255,0)); /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgba(153,153,153,.15) , rgba(255,255,255,0)); /* 标准的语法（必须放在最后）*/
+}
+
+#login .formbox{
+	width: 100%;
+	margin-top:0.3rem;
+}
+#loginForm .item{
+  margin-bottom: 0.24rem;
+}
+#loginForm .phone{
+	position: relative;
+}
+#loginForm .phone span{
+	position: absolute;
+	left:0.14rem;
+	top:50%;
+	font-size: 0.4rem;
+	color: #697681;
+	transform: translate(-50%,-50%);
+}
+#loginForm .phone input{
+	border: none;
+	color: #ababab;
+	padding:0.14rem 0.24rem;
+	padding-left: 0.4rem;
+	font-size: 0.26rem;
+	background-color: transparent;
+	
+}
+#loginForm .item input[type="text"]{
+	width: 100%;
+	box-sizing: border-box;
+}
+#loginForm .login_time{
+	border-top: 1px solid #e2e2e2;
+	margin-top: 0.24rem;
+	padding-top: 0.12rem;
+}
+#loginForm .login_time input{
+	margin-right: 0.14rem;
+	vertical-align: middle;
+}
+#loginForm .login_time span.fa{
+	font-size: 0.26rem;
+}
+#loginForm .login_time span{
+	vertical-align: middle;
+	color: #697681;
+	font-size: 0.24rem;
+	margin-right: 0.12rem;
+}
+#loginForm #btnLogin{
+	width: 100%;
+	text-align: center;
+	color: #fff;
+	padding:0.12rem 0;
+	box-sizing: border-box;
+	border-radius: 0.3rem;
+	margin-top: 1rem;
+	background: -webkit-linear-gradient(left, #f4a123 , #f46f22); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #f4a123, #f46f22); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #f4a123, #f46f22); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #f4a123 , #f46f22);
+}
+/*基本信息*/
+#app .img-box{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding:0.5rem 0;
+}
+#app .img-box img{
+	width: 80%;
+}
+#app .items{
+  padding:0.2rem;
+}
+#app .base .hello{
+	margin-bottom: 0.5rem;
+	font-size: 0.3rem;
+
+}
+#app .base .hello strong{
+  color: #ff9900
+}
+#app .base .hello p{
+  text-indent: 2em;
+  margin-top: 0.14rem;
+  line-height: 0.4rem;
+  font-size: 0.26rem;
+}
+#app .items .title{
+	text-align: center;
+	position: relative;
+	height: 2px;
+	background-color: #3399CC;
+	margin-bottom: 0.8rem;
+	margin-top:0.24rem;
+}
+#app .items .title span{
+	position: absolute;
+	min-width: 1rem;
+	display: inline-block;
+	background-color: #3399CC;
+	padding:0.14rem;
+	border-radius: 0.3rem;
+	color: #fff;
+	transform: translate(-50%,-50%);
+	top:0;
+	left:50%;
+	white-space: nowrap;
+}
+/*酒店预定信息*/
+#app .base .item ul li{
+	margin-bottom: 0.24rem;
+	font-size:0.3rem;
+	border-bottom: 1px solid #ccc;
+	padding-bottom:0.24rem;
+}
+#app .base .item ul li i{
+	color: #FFCC33;
+	margin-right: 0.1rem;
+}
+#app .base .item ul li span{
+	display: inline-block;
+	margin:0 0.1rem;
+	color: #ff9900;
+	font-size: 0.34rem;
+
+}
+/*球类运动*/
+.ball-item ul li{
+	display: flex;
+	align-items: flex-start;
+	margin-bottom: 0.24rem;
+	flex-direction: column;
+	border-bottom: 1px solid #d0a8e1;
+	padding-bottom: 0.2rem;
+}
+.ball-item ul li:last-child{
+	border-bottom: none;
+}
+.ball-item ul li i{
+	color: #000;
+	margin-right: 0.12rem;
+
+}
+.ball-item ul li .time{
+	font-weight: bolder;
+	margin-bottom: 0.24rem;
+	color: #1283f7;
+}
+.ball-item ul li .ball-title{
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.14rem;
+	font-size: 0.3rem;
+}
+.ball-item ul li .ball-title strong{
+	margin-right: 0.14rem;
+}
+.ball-item ul li .ball-title span{
+	color: #ff9900;
+}
+.ball-item ul li .ball-title select{
+	background-color: transparent;
+	min-width: 1.8rem;
+	padding:0.06rem;
+	color: #ff9800;
+}
+.ball-item ul li .ball-info{
+	width: 100%
+}
+.ball-item ul li .ball-info p{
+	color: #999;
+	font-size: 0.24rem;
+}
+.ball-item ul li .ball-info button{
+	color: #fff;
+	float: right;
+	background-color: #d0a8e1;
+	padding:0.05rem;
+	border-radius: 4px;
+	margin-top:0.14rem;
+}
+.ball-item ul li .ball-info .path-img{
+	margin-top: 1rem;
+	width: 100%;
+	display: none;
+}
+.ball-item ul li .ball-info .path-img img{
+	width: 100%;
+}
+/*活动座次安排*/
+#meeting .fa-building{
+	color: #945fe8
+}
+#meeting .fa-sitemap{
+	color: #23ca7d
+}
+
+/*线路图*/
+#route_img{
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.9);
+	/*display: none;*/
+}
+#route_img .img{
+	width: 100%;
+	height: 100%;
+	overflow:auto;
+	text-align: center;
+	padding: 0.24rem;
+	box-sizing: border-box;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#route_img .img img{
+	width: 90%;
+	height: auto;
+}
+
+#footer{
+	position: fixed;
+	width: 100%;
+	height: 0.88rem;
+	bottom:0;
+	left:0;
+	box-shadow: 0 0 10px 0 #ccc;
+	background-color: #fff;
+	z-index: 66
+}
+#footer ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#footer ul li{
+	min-width: 1.2rem;
+	height: 0.88rem;
+	display: flex;
+	flex:1;
+	text-align: center;
+	padding:0.06rem;
+	justify-content: center;
+	border-right: 1px solid #ccc;
+	align-items: center;
+	box-sizing: border-box;
+}
+#footer ul li:last-child{
+	border-right: 0px;
+}
+#footer ul li a{
+	color: #25a4bb;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*培训资料下载*/
+#file_upload .search{
+	margin:0.24rem 0;
+}
+.country ul{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.country li{
+    width: 1.2rem;
+    background-color: #073a78;
+    color: #fff;
+    padding: 0.1rem;
+    margin-right: 0.12rem;
+    margin-bottom: 0.24rem;
+    text-align: center;
+}
+.country li:last-child{
+	margin-right: 0px;
+}
+.country li:hover{
+	cursor: pointer;
+}
+.cont{width:100%; margin:0.1rem auto; border:1px dashed #e0e0e0; padding:0; font-size:0.26rem;}
+.cont .yxtable{background:#efefef; opacity:0.9; filter:alpha(opacity=90);}
+.cont .yxtable .title{font-size:0.26rem;}
+.cont .yxtable td{height:0.5rem;min-width: 0.6rem; border-bottom:1px dashed #e0e0e0;}
+.cont .yxtable tr:hover{background:#073a78; color:#fff;}
+.cont .yxtable tr:hover .white{
+	color: #ff9c00;
+}
+.white{
+    color: #073a78;
+    text-decoration: none;
+}
+.white:hover{
+	color: #fff;
+}
+.cont .yxtable tr td{
+	padding: 0.1rem 0;
+}
+.cont .filelist{
+	display: inline-block;
+	width: 0.6rem;
+}
+.country li.active{
+	background-color: #ff9c00;
+}
+.clearfix:before,.clearfix:after { 
+    content:"";
+    clear: both;
+    display:table;
+}
+@media only screen and (max-width: 600px){
+	.jplist-panel {
+	     display: block !important; 
+	}
+}
+.jplist-panel input[type=text]{
+	width: 2rem;
+}

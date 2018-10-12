@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>GEA全明星赛 All-Star Game</title>
+	<!-- 标题图标 -->
+    <!-- <link rel="icon" href="gea.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/basket.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+<body>
+<div id="app">
+  <div class="title">
+    <p class="zh_name">GEA全明星赛</p>
+    <p class="en_name">All-Star Game</p>
+  </div>
+  <div class="formtitle">报名表 Registration Form</div>
+  <div class="formbox">
+  	<form action="" id="infoform">
+  	  <div class="item">
+  	  	<div class="input-title">参赛队名<br>Basketball Team</div>
+        <div class="radio-box">
+          <select name="entryEvent.team_name" id="team_name">
+            <option value="随机">随机 Random Assignment</option>
+            <option value="橙队">橙队 Orange Team</option>
+            <option value="红队">红队 Red Team</option>
+          </select>
+          <!-- <input type="radio" name="team_name" id="orange"> <label for="orange">橙队<br>Orange</label>
+          <input type="radio" name="team_name" id="red"> <label for="red">红队<br>Red</label>
+          <input type="radio" name="team_name" checked="checked" id="other"> <label for="other">随机</label> -->
+        </div>
+  	  </div>
+  	  <div class="item">
+  	  	<div class="input-title">姓名<br>Name</div>
+        <input type="text" name="entryEvent.name" id="name">
+  	  </div>
+  	  <div class="item">
+  	  	<div class="input-title">机构<br>Institution</div>
+        <input type="text" name="entryEvent.institution" id="institution">
+  	  </div>
+  	  <div class="item">
+  	  	<div class="input-title">联系电话<br>Mobile</div>
+        <input type="text" name="entryEvent.mobile" id="mobile">
+  	  </div>
+  	  <div class="item">
+  	  	<div class="input-title">身高(cm)<br>Height</div>
+        <input type="number" name="entryEvent.height" id="height">
+  	  </div>
+  	  <div class="item">
+  	  	<div class="input-title">体重(kg)<br>Weight</div>
+        <input type="number" name="entryEvent.weight" id="weight">
+  	  </div>
+  	  <div class="item btnbox">
+  	  	<button type="button" id="subbtn">提交 Submit</button>
+  	  </div>
+  	</form>
+    <div class="footer">
+      <img src="images/ball.png" alt="">
+    </div>
+  </div>
+  
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $("#subbtn").click(function(){
+    var inputele = $('.item input');
+    for (var i = 0; i < inputele.length; i++) {
+      var vals = $(inputele[i]).val();
+      if (vals=="") {
+        alert("信息填写不完整！")
+        $(inputele[i]).focus()
+        return false;
+      }
+    }
+    var formdatas = $("#infoform").serialize()
+    $.ajax({
+      url:"/act/addEntryEvent",
+      type:"post",
+      data: formdatas,
+      dataType:"json",
+      success:function(res){
+        console.log(res)
+        if(res.status=="isok"){
+          window.location.href="basketballsucc.html"
+        }
+      }
+    })
+
+    
+  })
+})
+</script>
+</html>

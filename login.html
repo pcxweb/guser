@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>2018 GEA全球合作伙伴大会</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico" />
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+<div class="login_app">
+	<div class="login_logo">
+		<img src="images/login_logo.png" alt="">
+	</div>
+  <div id="login">
+  	<div class="language">
+		<div class="x-zhfamily active language_s" id="zh_CN" data-lan="zh_CN">中文版</div>
+		<div class="x-enfamily language_s" id="en_US" data-lan="en_US">English Version</div>
+	</div>
+	<div class="formbox">
+		<input type="hidden" value="1" id="typeval">
+		<form action="/guser/login" id="loginForm" method="post">
+			<div class="item phone"><span class="fa fa-mobile"></span><input translate="string_login_desc1" id="phone" name="phone" type="text" placeholder="请使用手机号码后六位数登录"></div>
+			<input type="checkbox" id="ischeck" name="checknum" hidden="hidden">
+			<div class="item login_time">
+				<!-- fa-check-square -->
+				<div class="checkdiv"><span class="fa fa-square-o"></span><span translate="string_login_desc2">30天内自动登录</span></div>
+			</div>
+			<div class="item"><button type="button" id="btnLogin" translate="string_login_desc3">登录</button></div>
+		</form>
+	</div>
+  </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+<script type="text/javascript" src="js/translate.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 手机端防止背景图挤变形
+	$('body').height($('body')[0].clientHeight);
+	if(getCookie("phoneval")){
+		$('#phone').val(getCookie("phoneval"))
+		
+	}
+	// $('#phone').focus(function(){
+	// 	$('#phone').val("")
+	// })
+	// 勾选30天
+	var checkval = false
+	$(".checkdiv").click(function(){
+
+		checkval = !checkval
+		$("#ischeck").attr("checked",checkval);
+		if(checkval){
+			$(this).find('.fa').removeClass('fa-square-o').addClass("fa-check-square")
+		}else{
+			$(this).find('.fa').addClass('fa-square-o').removeClass("fa-check-square")
+		}
+		
+	})
+	// 登录提交
+	$("#btnLogin").click(function(){
+		var users = $('#phone').val();
+		if(!users){
+			alert("请输入手机号后六位数！");
+			$('#phone').focus()
+			return false
+		}
+		// 判断是否选中
+		var checks = $("#ischeck").attr("checked")
+		if(checks){
+  			setCookie('phoneval',users,30);
+		}
+		// var formdatas = $("#loginForm").serialize();
+		$("#loginForm").submit()
+
+	})
+})
+
+</script>
+</html>

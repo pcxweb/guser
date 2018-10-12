@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>GEA全明星赛(All-Star Game)</title>
+	<!-- 标题图标 -->
+    <!-- <link rel="icon" href="gea.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+  <style>
+     body,html{
+      width: 100%;
+      height: 100%;
+     }
+     #app{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow:hidden;
+     }
+     #app img{
+      width: 100%;
+      min-height: 100%;
+      height: auto;
+     }
+     #app a{
+      position: absolute;
+      bottom:15%;
+      left: 50%;
+      padding:0.1rem 0.3rem;
+      font-size: 0.32rem;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color:#018bd4;
+      transform: translateX(-50%);
+      border-radius: 5px;
+     }
+     #app a span.zh-name{
+      letter-spacing: 0.5em;
+     }
+     #app a span.en-name{
+      font-size: 0.24rem;
+      margin-top:0.05rem;
+      word-spacing: 0.2em;
+     }
+  </style>
+</head>
+<body>
+<div id="app">
+  <img src="images/bg.jpg" alt="">
+  <a href="basketball.html">
+    <span class="zh-name">点击报名</span>
+    <span class="en-name">Sign Up</span>
+  </a>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>2018 GEA全球合作伙伴大会</title>
+	<!-- 标题图标 -->
+    <!-- <link rel="icon" href="gea.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	
+
+	<link rel="stylesheet" href="css/reset1.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+<body>
+<!-- 路线图显示 -->
+<div id="route_img">
+	<div class="img"><img src="images/place/B01.jpg" alt=""></div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+<script type="text/javascript" src="js/translate.js"></script>
+<script type="text/javascript">
+$(function(){
+	var urlobj = getUrlArgObject()
+	console.log(urlobj)
+	if(urlobj.type){
+		if(urlobj.type==1){
+			if(datalan == "zh_CN"){
+				$("#route_img img").attr("src","images/"+urlobj.img+".jpg")
+			}else{
+				$("#route_img img").attr("src","images/en-"+urlobj.img+".jpg")
+			}
+		}else if(urlobj.type==2){
+			if(datalan == "zh_CN"){
+				$("#route_img img").attr("src","images/place/"+urlobj.img+".jpg")
+			}else{
+				$("#route_img img").attr("src","images/place/en-"+urlobj.img+".jpg")
+			}
+		}else if(urlobj.type==3){
+			$("#route_img img").attr("src","images/place/"+urlobj.img+".jpg")
+		}
+	}
+	$("#route_img").click(function(){
+		window.location.href="/guser/index.jsp"
+	})
+	
+})
+//返回的是对象形式的参数    
+function getUrlArgObject(){    
+    var args=new Object();    
+    var query=location.search.substring(1);//获取查询串    
+    var pairs=query.split("&");//在逗号处断开    
+    for(var i=0;i<pairs.length;i++){    
+        var pos=pairs[i].indexOf('=');//查找name=value    
+        if(pos==-1){//如果没有找到就跳过    
+            continue;    
+        }    
+        var argname=pairs[i].substring(0,pos);//提取name    
+        var value=pairs[i].substring(pos+1);//提取value   
+        // console.log(decodeURI(value)) 
+        args[argname]=decodeURI(value);//存为属性    
+    }    
+    return args;//返回对象    
+}   
+</script>
+</html>

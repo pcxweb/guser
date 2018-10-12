@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>2018 GEA全球合作伙伴大会</title>
+	<!-- 标题图标 -->
+    <!-- <link rel="icon" href="gea.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+	<link rel="stylesheet" href="css/jqlist/jplist.demo-pages.min.css">
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<link rel="stylesheet" href="css/jqlist/jplist.core.min.css">
+	<script type="text/javascript" src="js/jqlist/jplist.core.min.js"></script>
+	<link rel="stylesheet" href="css/jqlist/jplist.textbox-filter.min.css">
+	<script type="text/javascript" src="js/jqlist/jplist.textbox-filter.min.js"></script>
+	<link rel="stylesheet" href="css/jqlist/jplist.filter-toggle-bundle.min.css">
+	<script type="text/javascript" src="js/jqlist/jplist.filter-toggle-bundle.min.js"></script>
+	<script src="js/jqlist/jplist.sort-bundle.min.js"></script>
+
+	<link rel="stylesheet" href="css/reset1.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+</head>
+<body>
+<div id="app">
+  <div class="img-box"><img src="images/login_logo.png" alt=""></div>
+  <div class="items" id="file_upload">
+	<div class="title"><span translate="string_nav_li2">培训资料下载</span></div>
+	<div class="search clearfix">
+		<div class="jplist-panel box panel-top">	
+			
+			<!-- <div class="jplist-panel box panel-top "> -->
+				<!-- radio buttons filters -->
+				<div class="jplist-group" style="display: none">
+					<!-- 默认选择所以 -->
+					<input 									
+					  data-control-type="radio-buttons-text-filters"
+					  data-control-action="filter"
+					  data-control-name=""
+					  value=""
+	                  data-path=".theme"
+					  
+					  type="radio" 
+					  name="jplist"
+					  checked="checked" 
+					  hidden="hidden" 
+				   /> 
+
+				   <input 									
+					  data-control-type="radio-buttons-text-filters"
+					  data-control-action="filter"
+					  data-control-name="Britain"
+					  value="英欧"
+	                  data-path=".theme"
+					  
+					  id="Britain" 
+					  type="radio" 
+					  name="jplist"
+					  hidden="hidden" 
+				   /> 
+					  
+				   <label for="Britain">英欧</label>
+				   
+				   <input 
+					  data-control-type="radio-buttons-text-filters"
+					  data-control-action="filter"
+					  data-control-name="Australia" 
+					  value="澳洲"
+	                  data-path=".theme"
+					  
+					  id="Australia" 
+					  type="radio"
+					  name="jplist"
+					  hidden="hidden" 
+				   /> 
+					  
+				   <label for="Australia">澳洲</label>
+				   
+				   <input 
+					  data-control-type="radio-buttons-text-filters"
+					  data-control-action="filter"
+					  data-control-name="America" 
+					  value="美国"
+	                  data-path=".theme"
+					  
+					  id="America" 
+					  type="radio" 
+					  name="jplist"
+					  hidden="hidden" 
+				   /> 
+				   
+				   <label for="America">美国</label>
+				   
+				   <input 
+					  data-control-type="radio-buttons-text-filters"
+					  data-control-action="filter"
+					  data-control-name="Canada" 
+					  value="加拿大"
+	                  data-path=".theme"
+					  
+					  id="Canada" 
+					  type="radio"
+					  name="jplist"
+					  hidden="hidden" 
+				   /> 
+				   
+				   <label for="Canada">加拿大</label>
+				   
+				   
+				</div>
+				<!-- 排序 -->
+				<div style="display: none" 
+				class="jplist-drop-down" 
+				data-control-type="sort-drop-down" 
+				data-control-name="sort" 
+				data-control-action="sort"
+				data-control-animate-to-top="true"
+				data-datetime-format="{month}/{day}/{year}"> <!-- {year}, {month}, {day}, {hour}, {min}, {sec} -->
+				
+				<ul>
+					<li><span data-path=".seat" data-order="asc" data-type="text">Title A-Z</span></li>
+				</ul>
+				</div>
+			<!-- </div>	 -->
+		</div>
+	</div>
+	<div class="college">
+		<div class="country">
+			<ul class="clearfix">
+				<li tag="Britain" class="tab">英欧</li>
+				<li tag="Australia" class="tab">澳洲</li>
+				<li tag="America" class="tab">美国</li>
+				<li tag="Canada" class="tab">加拿大</li>
+			</ul>
+		</div>
+
+		<div class="cont">
+			<table width="100%" border="0" cellspacing="1" class="yxtable">
+				<tbody class="list">
+					
+				</tbody>
+				<div class="jplist-no-results">
+			      <p>No results found</p>
+			    </div>
+			</table>
+		</div>
+	</div>
+  </div>
+  <div style="height: 1rem"></div>
+  <div id="footer">
+	<ul>
+	  <li><a href="index"><span translate="string_nav_li1">主页</span></a></li>
+	  <li><a href="file_index.html"><span translate="string_nav_li2">培训资料下载</span></a></li>
+	  <li><a href="images/chongqin.pdf" target="_blank"><span translate="string_nav_li3">重庆旅游攻略</span></a></li>
+	</ul>
+  </div>
+</div>
+</body>
+<!-- <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script> -->
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery.i18n.properties-min-1.0.9.js"></script>
+<script type="text/javascript" src="js/translate.js"></script>
+</html>
