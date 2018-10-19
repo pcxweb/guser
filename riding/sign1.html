@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>2018 环太湖公益骑行</title>
+	<!-- 标题图标 -->
+    <!-- <link rel="icon" href="gea.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/x-icon" href="/guser/favicon.ico" />
+	<link rel="stylesheet" href="/guser/css/reset1.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="riding" id="signpage">
+    <div class="top-img"><img src="img/topbg2.png" alt=""></div>
+    <div class="content">
+    	<p translate="string_sign_title">欢迎您加入我们的骑行队伍</p>
+    	<form action="" id="info-form">
+    		<input type="hidden" name="cycling.cyc_type" id="cyc_type">
+			<div class="fitem">
+				<p><label for="name"><span>*</span><strong translate="string_sign_input1">真实姓名</strong></label></p>
+				<input type="text" translate="string_sign_input1-pla" id="name" name="cycling.cyc_name" placeholder="请填写姓名">
+			</div>
+			<div class="fitem">
+				<p><label for="sex"><span>*</span><strong translate="string_sign_input2">性别</strong></label></p>
+				<select name="cycling.cyc_gender" id="sex">
+					<option translate="string_sign_input2-girl" value="0">女</option>
+					<option translate="string_sign_input2-boy" value="1">男</option>
+				</select>
+			</div>
+			<div class="fitem">
+				<p><label for="phone"><span>*</span><strong translate="string_sign_input3">联系电话</strong></label></p>
+				<input type="number" translate="string_clothesinfo-input3-1" id="phone" name="cycling.cyc_phone" placeholder="请填写手机号">
+			</div>
+			<div class="fitem">
+				<p><label for="idcode_type"><span>*</span><strong translate="string_sign_input4">证件类型</strong></label></p>
+				<select name="cycling.cyc_iden_type" id="idcode_type">
+					<option translate="string_sign_input4-1" value="0">身份证</option>
+					<option translate="string_sign_input4-2" value="1">护照</option>
+					<option translate="string_sign_input4-3" value="2">港澳回乡证</option>
+					<option translate="string_sign_input4-4" value="3">台胞证</option>
+				</select>
+			</div>
+			<div class="fitem">
+				<p><label for="idnumber"><span>*</span><strong translate="string_sign_input5">证件号码</strong></label></p>
+				<input type="text" id="idnumber" name="cycling.cyc_iden" placeholder="">
+			</div>
+			<div class="fitem">
+				<p><label for="bath_date"><span>*</span><strong translate="string_sign_input6">出生日期</strong></label></p>
+				<input type="date" id="bath_date" name="cycling.cyc_birthdate">
+			</div>
+			<div class="fitem">
+				<p><label for="city"><span>*</span><strong translate="string_sign_input7">所在省市</strong></label></p>
+				<select  id="city">
+					<option value="" id="cityone" translate="string_same_select">请选择省市</option>
+				</select>
+			</div>
+			<div class="fitem">
+				<p><label for="area"><span>*</span><strong translate="string_sign_input8">居住城市</strong></label></p>
+				<select name="cycling.cyc_city" id="area">
+					<option value="" id="areaone" translate="string_same_select">请选择城市</option>
+				</select>
+			</div>
+			<div class="fitem">
+				<p><label for="company"><span>*</span><strong translate="string_sign_input9">所在机构</strong></label></p>
+				<input type="text" id="company" name="cycling.cyc_unit" placeholder="">
+			</div>
+			<div class="fitem">
+				<p><label for="email"><span>*</span><strong translate="string_sign_input10">邮箱</strong></label></p>
+				<input type="email" id="email" name="cycling.cyc_email" placeholder="">
+			</div>
+    	</form>
+    </div>
+    <div class="zhan" style="height: 1.5rem;"></div>
+    <div class="footer">
+		<div class="money"><span translate="string_same_signmoney">报名费：</span> <strong id="typenum"></strong></div>
+		<div class="next"><a id="nextbtn" href="javascript:;" translate="string_same_btn3">下一步</a></div>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript" src="/guser/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/register.js"></script>
+<script type="text/javascript" src="/guser/js/jquery.i18n.properties-min-1.0.9.js"></script>
+<script type="text/javascript" src="js/translate.js"></script>
+<script type="text/javascript">
+$(function(){
+    var typearr = getUrlArgObject();
+    if(typearr.type){
+        console.log(typearr.type)
+        if(typearr.type==1){
+            $("#cyc_type").val(typearr.type)
+        }else if(typearr.type==2){
+            $("#cyc_type").val(typearr.type)
+        }
+
+    }
+})
+</script>
+</html>

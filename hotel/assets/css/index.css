@@ -1,0 +1,278 @@
+/*index.html样式*/
+#indexbox .detailbtn{
+	color: #fff;
+}
+
+/*酒店安排*/
+.hotel_range .resultTotal{
+	display: none;
+	text-align: center;;
+}
+/*rr房间使用统计*/
+.small-total{
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	color: #666
+}
+.small-total .stitle{
+	margin-right: 5px;
+	font-weight: bold;
+}
+.small-total  .sitem{
+	margin-right: 10px;
+	
+}
+.small-total  .sitem strong{
+	color: red
+}
+.hotel_range .am-icon-mars,.hotel_range .am-icon-venus{
+	font-size: 1em;
+	font-weight: bold;
+}
+/*男图标*/
+.hotel_range .am-icon-mars{
+	color: #7b32bd;
+}
+/*女图标*/
+.hotel_range .am-icon-venus{
+	color: #e231e4;
+}
+.hotel_range .choosebtn{
+	display: flex;
+	align-items: center;
+	margin-bottom: 8px;
+	cursor: pointer;
+}
+.hotel_range .choosebtn span{
+	margin-right: 8px;
+}
+#rr-item .am-btn{
+	color: #fff
+}
+.btnbox .am-btn-rr1{
+	background-color: red;
+	border-color: red;
+}
+.btnbox .am-btn-rr2{
+	background-color: orange;
+	border-color: orange;
+}
+.btnbox .am-btn-rr3{
+	background-color: green;
+	border-color: green;
+}
+.btnbox .am-btn-rr4{
+	background-color: blue;
+	border-color: blue;
+}
+.btnbox .am-btn-rr5{
+	background-color: brown;
+	border-color: brown;
+}
+.btnbox .am-btn-rr6{
+	background-color: purple;
+	border-color: purple;
+}
+.check-active{
+	color: #3734f1;
+	font-weight: bolder;
+}
+
+
+.hotel_range .choosebtn .check{
+	display: inline-block;
+	width: 35px;
+	height: 25px;
+	border:1px solid #999;
+	text-align: center;
+}
+.hotel_range td>div.active{
+	background-color: yellow;
+}
+.hotel_range .choosebtn .check i{
+	display: none
+}
+.hotel_range .choosebtn .check .empty{
+	color: #999;
+	margin-right: 0
+}
+.hotel_range .choosebtn .cbg{
+	color: #fff;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.hotel_range .choosebtn .cbg i{
+	display: inline;
+}
+.hotel_range .choosebtn .cbg .empty{
+	display: none;
+}
+
+.hotel_range .choosebtn  .rr1{
+	background-color: red;
+	border-color: red;
+}
+.hotel_range .choosebtn  .rr2{
+	background-color: orange;
+    border-color: orange;
+}
+.hotel_range .choosebtn  .rr3{
+	background-color: green;
+    border-color: green;
+}
+.hotel_range .choosebtn  .rr4{
+	background-color: blue;
+    border-color: blue;
+}
+.hotel_range .choosebtn  .rr5{
+	background-color: brown;
+    border-color: brown;
+}
+.hotel_range .choosebtn  .rr6{
+	background-color: purple;
+    border-color: purple;
+}
+.hotel_range .choosebtn  .rrk{
+	background-color: black;
+    border-color: black;
+}
+/*绑定房间*/
+.hotel_range tbody .am-selected{
+	display: none;
+}
+
+/*筛选条件*/
+.filterbox .desc{
+	display: inline-block;
+	font-weight: bold;
+	font-size: 1.4rem;
+	margin-bottom: 1rem;
+}
+
+/*安排人员模态框*/
+#infomodal .am-modal-bd{
+	margin-top: 10px;
+
+}
+#infomodal .am-modal-bd form{
+	padding:10px;
+	
+}
+.js-model-btn{
+	display: table-cell!important;
+    padding: 0 5px;
+    height: 44px;
+    -webkit-box-sizing: border-box!important;
+    box-sizing: border-box!important;
+    font-size: 1.6rem;
+    line-height: 44px;
+    text-align: center;
+    color: #0e90d2;
+    display: block;
+    word-wrap: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border-right: 1px solid #dedede;
+}
+
+/*人员列表*/
+/*#peoplelist */
+
+#peoplelist .detailtd{
+	position: relative;
+}
+#peoplelist .detailtd .home-info{
+	font-size: 0.8em;
+	display: none;
+	position: absolute;
+	top:40px;
+	right:0px;
+	z-index: 1;
+    background-color: #fff;
+    padding: 10px;
+    width: 200px;
+    border:1px solid #ff9800;
+    box-shadow: 0 0 10px 0px #ff9800
+}
+#peoplelist .home-info p{
+	margin:0.5rem 0;
+
+}
+.am-popover-top .am-popover-caret{
+	left: 70%;
+
+}
+
+
+/*入住人信息*/
+#changehotel .liveinfo{
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	font-size: 1.6rem;
+	border-bottom: 1px solid #ccc;
+}
+#changehotel .liveinfo .title{
+	font-weight: bold;
+}
+
+
+
+/*人员单位管理*/
+
+.unit-tab{
+	min-height: 500px;
+}
+.unit-tab .am-tab-panel{
+	margin:10px auto;
+}
+.unitform .unitbox label{
+	padding-top: 0.4em;
+}
+
+
+/*登录样式*/
+#loginform input{
+	font-size: 1.4rem;
+	padding:5px;
+	padding-left:10px;
+	border: 1px solid #e6e6e6;
+	background-color: #f8f8f8;
+	width: 200px;
+	
+}
+
+/*座位安排*/
+#table_arrange .tdbox, #dinner_arrange .tdbox{
+	display: flex;
+	flex-wrap: wrap;
+	/*justify-content: space-between;*/
+}
+#table_arrange .tdbox{
+	max-width: 280px;
+	min-width: 100px;
+	margin: 0 auto;
+}
+#dinner_arrange .tdbox{
+	width: 100%;
+}
+#table_arrange .tdbox .choosebtn,#dinner_arrange .tdbox .choosebtn{
+	margin-right: 5px;
+	min-width: 110px;
+    /*flex: 1;*/
+}
+#table_arrange .tdbox .choosebtn .info,#dinner_arrange .tdbox .choosebtn .info{
+	flex: 1;
+	overflow: hidden;
+  	white-space: nowrap;
+  	text-overflow: ellipsis;
+  	text-align: left;
+}
+#table_arrange .choosebtn .check,#dinner_arrange .choosebtn .check{
+	width: 38px
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>2018 GEA全球合作伙伴大会</title>
+	<!-- 标题图标 -->
+    <!-- <link rel="icon" href="gea.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/x-icon" href="/guser/favicon.ico" />
+
+	<link rel="stylesheet" href="/guser/css/reset1.css">
+	<link rel="stylesheet" href="/guser/css/index.css">
+	<style>
+	  #giving #login{
+	  	border-radius: 0px;
+	  }
+	  #giving #loginForm label{
+	  	display: block;
+		font-size: 0.35rem;
+		color: #3c4d5c;
+	  }
+	  #giving #loginForm .item{
+	  	padding-bottom: 0.35rem;
+	  }
+	  .border-bottom{
+	  	border-bottom: 1px solid #ccc
+	  }
+	  #loginForm #btnLogin{
+	  	margin-top: 0.3rem;
+	  	line-height: 0.35rem;
+	  	font-size: 0.3rem;
+	  }
+	  #loginForm #btnLogin span{
+	  	font-size: 0.3rem;
+	  }
+	  #giving #loginForm input{
+	  	background-color:transparent;
+	  	padding:0.12rem 0;
+	  	font-size: 0.3rem;
+	  	color: #666;
+	  }
+	</style>
+</head>
+<body>
+<div class="login_app" id="giving">
+    <div class="login_logo">
+		<img src="/guser/images/login_logo.png" alt="">
+	</div>
+	<div id="login">
+		<div class="formbox">
+			<form action="/giving/saveGiving" id="loginForm" >
+				<!--  支付宝 -->
+				<input type="hidden" name="giving.giv_pay_type" value="1" >
+
+				<div class="item border-bottom">
+					<label>您的桌号</label>
+					<input type="text" class="x-enfamily" name="giving.giv_tb_num" id="table_num" placeholder="Your Table Number">
+				</div>
+				<div class="item">
+					<label>您的姓名</label>
+					<input type="text" class="x-enfamily" name="giving.giv_name" id="name" placeholder="Your Name">
+				</div>
+
+				<div class="item">
+					<button type="button" id="btnLogin">下一步<br><span class="x-enfamily">Next</span></button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript" src="/guser/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	// 手机端防止背景图挤变形
+	$('body').height($('body')[0].clientHeight);
+	$("#btnLogin").click(function(){
+		var nameval = $("#name").val();
+		if(!nameval){
+			alert("姓名不能为空！")
+			$("#name").focus();
+			return false;
+		}
+		$("#loginForm").submit();
+	})
+	
+})
+</script>
+</html>

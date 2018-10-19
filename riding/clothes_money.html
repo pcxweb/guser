@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1.0">
+	<title>2018 环太湖公益骑行</title>
+	<!-- 标题图标 -->
+    <!-- <link rel="icon" href="gea.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/x-icon" href="/guser/favicon.ico" />
+	<link rel="stylesheet" href="/guser/css/reset1.css">
+	<link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="/guser/css/font-awesome.min.css">
+   
+</head>
+<body>
+<div class="riding" id="give_money">
+    <div class="top-img"><img src="img/topbg2.png" alt=""></div>
+    <div class="content">
+    	<p class="c-title"><span translate="string_clothes_money-title">您的购买总额：</span><strong id="totalnum" class="strong">¥ 98.00</strong></p>
+    	<div class="item type1">
+            <p><span translate="string_clothes_money-desc1-1">请长按识别图中二维码，进入转账页面后即可进行转账汇款，</span><span style="color: red" translate="string_clothes_money-desc1-2">汇款后请在"添加留言"处标明自己的姓名、购买数量，</span><span translate="string_clothes_money-desc1-3">以便于进行确认订单。</span><span translate="string_clothes_money-desc2-4"></span></p>
+        </div>
+        <div class="item type2" style="display: none"><p><span translate="string_clothes_money-desc2-1">请长按识别图中二维码，进入转账页面后即可进行转账汇款，</span><span style="color: red" translate="string_clothes_money-desc2-2">汇款后请在"添加留言"处标明自己的姓名、电话</span><span translate="string_clothes_money-desc2-3">，以便于进行专项统计和明细公布。感谢您的爱心捐赠！</span><span translate="string_clothes_money-desc2-4"></span></p></div>
+    	<div class="item">
+    		<div class="paycode">
+		    	<img src="img/riding-wechat.png" alt="">
+		    	<div class="desc">
+		    		<img src="/guser/images/wechat-icon.png" alt="">
+		    		<div style="text-align:left">
+		    			<p translate="string_giv_money-moneydesc">（接收微信转账）</p>
+		    		</div>
+		    	</div>
+	    	</div>
+    	</div>
+        <div class="item" id="isshow">
+            <p translate="string_clothes_money-desc6">感谢您参与Giving五周年纪念衫义卖会，你买衣我捐赠活动，您购买所筹的金额将在扣除纪念衫成本费用后，余额全数捐赠于Giving Ride For The Children公益骑行项目，感谢您的爱心捐赠！</p>
+        </div>
+    </div>
+</div>
+<div class="zhan" style="height: 0.8rem"></div>
+<div id="languageBox">
+    <ul>
+        <li class="language_s zhfamily" data-lan="zh_CN">中文版</li>
+        <li class="language_s enfamily" data-lan="en_US">English Version</li>
+    </ul>
+</div>
+</body>
+<script type="text/javascript" src="/guser/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+$(function(){
+    var typearr = getUrlArgObject();
+
+    if(typearr.total){
+        
+        $("#totalnum").text("¥ "+typearr.total);
+
+    }
+    if(typearr.type==2){
+        $("#give_money .c-title").css("display","none")
+        $("#isshow").css("display","none")
+        $(".type1").css("display","none")
+        $(".type2").css("display","block")
+    }
+})
+</script>
+<script type="text/javascript" src="/guser/js/jquery.i18n.properties-min-1.0.9.js"></script>
+<script type="text/javascript" src="js/translate.js"></script>
+<script type="text/javascript">
+$(function(){
+    var datalan = getCookie("language");
+    if(datalan=="en_US"){
+        $(".type2 span").css("display","block")
+        $(".type2 span").css("marginBottom","8px")
+        $(".type1 span").css("display","block")
+        $(".type1 span").css("marginBottom","8px")
+        
+    }else{
+        $(".type2 span").css("display","inline")
+        $(".type2 span").css("marginBottom","0px")
+        $(".type1 span").css("display","inline")
+        $(".type1 span").css("marginBottom","0px")
+    }
+})
+</script>
+</html>

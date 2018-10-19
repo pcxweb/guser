@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>2018 环太湖公益骑行</title>
+	<!-- 标题图标 -->
+    <!-- <link rel="icon" href="gea.ico" type="image/x-icon"> -->
+    <link rel="icon" type="image/x-icon" href="/guser/favicon.ico" />
+
+	<link rel="stylesheet" href="/guser/css/basket.css">
+	<link rel="stylesheet" href="/guser/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/guser/js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<style>
+		#list{
+			margin:3rem 2rem;
+		}
+		.title{
+			font-size: 1.8rem;
+			margin-bottom: 1rem;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+<div id="list">
+  <div class="title">衣服订单列表</div>
+  <table class="table table-striped table-bordered table-responsive">
+  	<thead>
+  		<tr>
+  			<th>姓名</th>
+        <th>电话</th>
+        <th>收货地址</th>
+  			<th>总金额</th>
+        <th>订单详情</th>
+        <th>发货状态</th>
+        <th>操作</th>
+  		</tr>
+  	</thead>
+  	<tbody id="tbody_box">
+  		<tr>
+  			<td>A01</td>
+        <td>哈哈</td>
+        <td>广州</td>
+        <td></td>
+        <td>订单</td>
+        <td>已发货</td>
+  			<td><button type="button" class="btn btn-xs btn-info">更新</button></td>
+  		</tr>
+  	</tbody>
+  </table>
+</div>
+</body>
+<script type="text/javascript" src="/guser/js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/guser/js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+$(function(){
+  $.ajax({
+    url:"/giving/getOrdList",
+    type:"post",
+    datatype:"json",
+    success:function(res){
+      console.log(res)
+      var result = ""
+      for (var i = 0; i < res.length; i++) {
+        var shipval = "未发货"
+        if(res[i].ord_ship==1){
+          shipval = "已发货"
+        }
+        var orderobj = JSON.parse(res[i].ord_info);
+        console.log(orderobj)
+        var orderstr = "";
+        if(orderobj){
+          for (var j = 0; j < orderobj.length; j++) {
+            orderstr+='<p> '+orderobj[j].gender+' —— '+orderobj[j].size+' —— '+orderobj[j].num+' </p>'
+          }
+        }
+        
+        result+='<tr data-id="'+res[i].ord_id+'"><td>'+res[i].ord_name+'</td><td>'+res[i].ord_phone+'</td><td>'+res[i].ord_addr+'</td></td><td>'+res[i].ord_total+'</td><td>'+orderstr+'</td><td>'+shipval+'</td><td><button type="button" class="btn btn-xs btn-info updatebtn">更新</button></td></tr>'
+      }
+      $("#tbody_box").html(result)
+    }
+  })
+  $("#tbody_box").on("click",".updatebtn",function(){
+    var thisId = $(this).parents('tr').attr("data-id");
+    // console.log(thisId)
+    $.ajax({
+      url:"/giving/updateOrdSend",
+      type:"post",
+      datatype:"json",
+      data:{ord_id:thisId},
+      success:function(res){
+        if(res.status=="isok"){
+          alert("更新成功！")
+          location.reload()
+        }
+      }
+    })
+  })
+
+  
+})
+</script>
+</html>
